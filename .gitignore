@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+.next/
+build/
+dist/
+__pycache__/
+*.pyc
+venv/
+.venv*/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+.pytest_cache/
+coverage/
+test-output.txt
+*.tsbuildinfo
+
+# Docker
+.docker/
+
+# Logs
+*.log
