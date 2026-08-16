@@ -83,12 +83,14 @@ Each phase uses the same core: agents + workflow engine + governance + observabi
 
 ---
 
-## Key Metrics We Track
+## Key Metrics
 
-| Metric | Current | Target |
-|--------|---------|--------|
-| Agent execution success rate | 95%+ | 99%+ |
-| End-to-end workflow completion | 85%+ | 95%+ |
-| Time to first lead response | <5 min | <1 min |
-| System uptime | 99.5% | 99.9% |
-| API response time (p95) | <200ms | <100ms |
+> **Note:** The metrics below are internal testing and demo figures, not production-validated numbers. Production metrics will be tracked and reported after customer deployments.
+
+| Metric | Internal Testing | Production Target |
+|--------|-----------------|-------------------|
+| Agent execution success rate | ~95% (testing) | 99%+ |
+| End-to-end workflow completion | ~85% (testing) | 95%+ |
+| Time to first lead response | <5 min (demo) | <1 min |
+| System uptime | N/A (no production deployment) | 99.9% |
+| API response time (p95) | <200ms (testing) | <100ms |

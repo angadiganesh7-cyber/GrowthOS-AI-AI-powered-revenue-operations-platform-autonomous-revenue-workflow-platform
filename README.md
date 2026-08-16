@@ -4,23 +4,37 @@
 
 ### The Execution Layer for Revenue Workflows
 
-**10 specialized AI agents that research, qualify, score, approve, outreach, update CRM, and measure — orchestrated by workflows, governed by humans, visible end-to-end.**
+**Lead in. Research. Qualify. Score. Approve. Outreach. CRM. Meeting. Measure.**
+**One platform. 10 AI agents. Full workflow. Human oversight. Every action visible.**
 
 [![License: Proprietary](https://img.shields.io/badge/License-Enterprise_Proprietary-blue.svg)](#license)
 [![Status](https://img.shields.io/badge/Status-RC.5-green.svg)](#current-status)
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB.svg)](https://python.org)
-[![Next.js](https://img.shields.io/badge/Next.js-16-000000.svg)](https://nextjs.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.139-009688.svg)](https://fastapi.tiangolo.com)
 
 </div>
 
 ---
 
+## The Problem
+
+Revenue operations teams run 6-12 disconnected tools to move a lead from first touch to closed deal. A CRM stores records. An enrichment tool researches companies. A scoring platform ranks leads. An outbound tool sends sequences. Slack handles handoffs. Spreadsheets track reporting. Nothing runs autonomously. Nothing connects.
+
+**The cost of this fragmentation:**
+
+| Pain Point | What Happens | Impact |
+|------------|-------------|--------|
+| Tool fragmentation | Multiple logins and integrations to maintain | Reps spend significant time on coordination instead of selling |
+| Manual handoffs | Leads pass between tools via copy-paste or scripts | Response time drops from minutes to hours or days |
+| Inconsistent qualification | Each rep qualifies differently | Pipeline quality varies; bad deals waste engineering time |
+| No workflow visibility | No single view of the lead-to-meeting process | Cannot measure cost per lead or identify bottlenecks |
+| No cost attribution | Token usage, API calls, and agent work are unmetered | Cannot determine which workflows produce ROI |
+
+> **Source note:** The pain points above are based on commonly observed B2B revenue operations patterns. The "6-12 tools" figure reflects typical mid-market B2B sales stacks (CRM + enrichment + outbound + scoring + analytics + communication + workflow). No proprietary measurement data is cited.
+
+**GrowthOS AI replaces this fragmentation with a single execution layer.**
+
+---
+
 ## What GrowthOS AI Does
-
-Revenue teams use 6-12 tools to move a lead from first touch to closed deal. CRM for records. Outreach for sequences. A separate tool for scoring. Another for research. Slack threads for handoffs. Spreadsheets for reporting. Nothing runs autonomously. Nothing connects.
-
-**GrowthOS AI replaces this with a single execution layer.**
 
 When a lead enters GrowthOS, AI agents automatically research the company, score the lead, qualify the prospect, draft outreach, update the CRM, and report on performance — with human approval at every high-risk step.
 
@@ -96,19 +110,32 @@ Here is what happens when a lead enters GrowthOS AI:
                +-------------------+   performance, full audit trail
 ```
 
-**Every step has a WHY:**
+---
 
-| Step | What Happens | Why It Matters |
-|------|-------------|----------------|
-| Lead Ingest | Leads enter from any source | No lead is lost between tools |
-| Research | Agent enriches with company data | Reps start with context, not空白 |
-| Qualification | Structured discovery (BANT) | Consistent qualification criteria |
-| Scoring | AI-ranked lead confidence | Sales focuses on highest-value leads |
-| Human Approval | High-risk actions pause for review | Humans stay in control of critical decisions |
-| Workflow Engine | Parallel and sequential execution | Complex processes run deterministically |
-| CRM Update | Records stay current automatically | No manual data entry, no stale pipeline |
-| Outreach | Multi-channel, context-aware | Right message, right channel, right timing |
-| Analytics | Cost, time, outcome attribution | Know what works and what costs too much |
+## Illustrative Lead Journey
+
+> **This is an illustrative example, not a customer case study.** It shows how a lead would flow through the complete GrowthOS workflow.
+
+**Scenario:** A 150-person B2B SaaS company receives a lead from a webinar signup.
+
+| Step | What Happens | System Action |
+|------|-------------|---------------|
+| **1. Ingest** | Lead enters via webinar registration API | Normalized, de-duplicated, source attributed as "webinar" |
+| **2. Research** | Research Agent enriches with company data | Finds: 150 employees, Series B, uses Salesforce + Outreach + ZoomInfo, recent funding announcement |
+| **3. Qualify** | Qualification Agent runs BANT discovery | Budget: confirmed (recent fundraise). Authority: VP Marketing registered. Need: scaling outbound. Timeline: Q2. |
+| **4. Score** | Scoring Agent ranks the lead | Score: 84/100. High intent, good fit, timing aligned. |
+| **5. Decision** | Score exceeds threshold (70+) | Routed to qualified pipeline |
+| **6. Approval** | Approval Agent flags for manager review | Confidence: 84%. Risk: Medium (new contact, no prior interaction). Pauses for human sign-off. |
+| **7. Human Review** | Manager reviews in approval queue | Sees: company data, qualification, score, proposed outreach. Approves with one click. |
+| **8. CRM Update** | CRM Agent creates contact + deal | Contact created, deal opened at $24K ARR, activity logged, source tagged |
+| **9. Outreach** | Sales Agent drafts personalized email | References: recent fundraise, scaling outbound, uses 3 tools GrowthOS could replace |
+| **10. Multi-channel** | Follow-up via LinkedIn + email sequence | Day 1: email. Day 3: LinkedIn connection. Day 5: follow-up email with case study. |
+| **11. Pipeline** | Lead responds, meeting booked | Deal stage advances to "Discovery Scheduled." CRM updated automatically. |
+| **12. Analytics** | Workflow metrics recorded | Time to meeting: 5 days. Cost: agent tokens + API calls. Source: webinar. |
+
+**Total time from lead entry to meeting booked: 5 days.**
+
+> These timelines are illustrative. Actual performance depends on lead quality, agent configuration, and human review speed.
 
 ---
 
@@ -136,8 +163,6 @@ GrowthOS AI runs as a closed-loop system. Every revenue workflow follows seven p
 
 This loop runs continuously. The more it runs, the more data it collects, the smarter the decisions become.
 
-**This is the core concept: not a set of disconnected tools, but a self-improving revenue execution system.**
-
 ---
 
 ## Why Not Just a CRM?
@@ -154,9 +179,30 @@ Tools automate individual activities.
 
 **GrowthOS orchestrates the entire governed revenue workflow.**
 
-A CRM tells you what happened. An outbound tool sends what you tell it. An AI SDR chats with prospects. Workflow automation connects scripts.
+---
 
-GrowthOS does something none of these do: it takes a lead from ingestion through research, qualification, scoring, approval, outreach, CRM update, and measurement — as one coordinated, auditable, cost-tracked workflow with specialized AI agents at every step.
+## Why Not Salesforce + Zapier + LangChain?
+
+An investor may ask: "Why can't a company just wire together Salesforce (CRM) + Zapier (automation) + LangChain or CrewAI (AI agents)?"
+
+**They can. Here is why they would not want to.**
+
+| Requirement | Salesforce + Zapier + LangChain | GrowthOS |
+|-------------|--------------------------------|----------|
+| Lead-to-meeting workflow | Build custom: Salesforce API + Zapier triggers + LangChain agent + custom approval logic | Built-in: complete lead-to-revenue workflow with 10 agents |
+| Human approval gates | Custom code: build approval UI, webhook handlers, state management | Built-in: approval queue with confidence scores, risk levels, one-click approve/reject |
+| Multi-agent coordination | Custom code: manage agent sessions, shared memory, handoffs | Built-in: 10 specialized agents with defined responsibilities and guardrails |
+| Tool authorization | Custom code: build auth boundaries, risk classification per tool | Built-in: fail-closed `ToolExecutor.authorize()` with risk levels |
+| Cost attribution | Custom code: track token usage, API costs, map to workflows | Built-in: per-agent, per-workflow, per-lead cost attribution |
+| Multi-tenant SaaS | Custom code: build tenant isolation, RBAC, quotas from scratch | Built-in: organization-scoped isolation, 7 roles, per-tenant quotas |
+| Observability | Custom code: instrument each service, build dashboards | Built-in: Prometheus metrics, OpenTelemetry tracing, structured logging |
+| Maintenance | Update 3+ systems, manage integrations, fix breakages | Single platform, single deployment |
+
+**The build-vs-buy tradeoff:**
+- **Build:** Requires significant integration engineering. Ongoing maintenance of 3+ systems. Custom approval logic. Custom observability. Custom multi-tenancy.
+- **Buy:** Complete platform, ready to configure. Governance, observability, and multi-tenancy included.
+
+GrowthOS is not a framework. It is an integrated revenue-execution product layer combining orchestration, governance, observability, and workflow controls in one system.
 
 ---
 
@@ -201,8 +247,6 @@ Multi-tenant isolation, RBAC with 7 roles, tool authorization boundaries, idempo
 - Measurable cost per workflow
 - Reps focused on closing, not coordinating
 
-**The value proposition is simple:** replace operational fragmentation with coordinated AI execution, and get measurable visibility into what each workflow costs and produces.
-
 ---
 
 ## Initial Wedge
@@ -222,8 +266,6 @@ Lead Ingest -> Research -> Qualify -> Score -> Approve -> CRM -> Outreach -> Mee
 ```
 
 This is the highest-value, most universal revenue workflow. It is narrow enough to sell as a focused solution while using the full platform foundation.
-
-Once this workflow is running, the same agents, engine, and governance layer can power additional workflows without rebuilding the core.
 
 ---
 
@@ -250,6 +292,176 @@ Lead / sales qualification workflow
 - Multi-tenant SaaS control plane
 
 **The platform thesis:** One agent runtime + one workflow engine + one governance layer = multiple revenue workflows on a single operating system.
+
+---
+
+## Current Stage
+
+| Attribute | Status |
+|-----------|--------|
+| **Product version** | RC.5 (Release Candidate 5) |
+| **Product status** | Working product — 72 frontend pages, 191 API endpoints, 10 AI agents |
+| **Validation stage** | Product validation / demo stage |
+| **Customers** | None claimed. No production deployments yet. |
+| **Revenue** | None claimed. No commercial transactions yet. |
+| **Team** | Founder and team details will be presented in the Antler application |
+| **Next milestones** | Demo deployment, design partner pilots, first revenue |
+
+**What is built and verified:**
+- Complete multi-agent orchestration runtime
+- 10 specialized AI agents with guardrails
+- DAG-based workflow engine with retries, checkpoints, dead letter queues
+- Built-in CRM with pipeline management
+- Human-in-the-loop approval system
+- Multi-tenant SaaS with isolation, RBAC, and quotas
+- AI guardrails (prompt injection detection, PII filtering)
+- Observability (Prometheus, OpenTelemetry, structured logging)
+- Idempotent operations across usage, cost, CRM, email, and approval
+- Emergency kill switch
+- 810/810 tests passing (internal testing, not production-validated)
+
+> All metrics above are from internal testing and development, not production deployments. Production metrics will be tracked and reported after customer deployments.
+
+---
+
+## Business Model
+
+> **Proposed model — not yet commercially validated.**
+
+GrowthOS AI is intended to operate as a B2B SaaS platform with tiered subscription pricing.
+
+| Dimension | Approach |
+|-----------|----------|
+| **Revenue model** | Monthly/annual SaaS subscription |
+| **Pricing levers** | Number of agents, workflow volume, seats, features |
+| **Target ACV** | Mid-market range (to be validated through customer discovery) |
+| **Free tier** | Potential limited free tier for evaluation and product-led growth |
+| **Enterprise tier** | Custom pricing for dedicated infrastructure, SLA, and support |
+
+**Proposed tier structure:**
+
+| Tier | Target | Include |
+|------|--------|---------|
+| **Starter** | Early-stage B2B, small teams | Core agents, limited workflow volume, community support |
+| **Growth** | Mid-market B2B (50-200 employees) | Full agent suite, higher workflow volume, email support |
+| **Enterprise** | Mid-market to upper-mid (200-500 employees) | Custom agents, unlimited workflows, dedicated support, SSO |
+
+> Pricing specifics will be determined through customer discovery and market testing. The above is a framework, not a validated price list.
+
+---
+
+## Go-to-Market Strategy
+
+> **Planned strategy — not yet executed.**
+
+### Phase 1: Design Partners (Months 1-3)
+- Recruit 5-10 design partners from mid-market B2B companies
+- Offer free access in exchange for feedback and case studies
+- Validate the lead qualification workflow with real leads
+- Iterate on agent performance and workflow configuration
+
+### Phase 2: Early Customers (Months 3-6)
+- Convert best design partners to paying customers
+- Founder-led sales to first 10-20 customers
+- Target companies currently using 4+ tools for lead management
+- Position as replacement for fragmented RevOps stack
+
+### Phase 3: Scaling (Months 6-12)
+- Content marketing: publish insights on revenue operations fragmentation
+- Direct outreach to companies using Salesforce + Outreach + ZoomInfo stacks
+- Partnerships with RevOps consultants and agencies
+- Product-led growth tier for self-serve evaluation
+
+### Customer Acquisition Channels
+1. **Founder-led sales** — Direct outreach to target companies
+2. **Content marketing** — Revenue operations thought leadership
+3. **Community** — RevOps communities, LinkedIn, B2B SaaS forums
+4. **Partnerships** — RevOps consultants, Salesforce consultants, agencies
+5. **Product-led growth** — Free tier for evaluation and viral adoption
+
+---
+
+## Market Sizing
+
+> **Methodology-based framework — not proprietary market research.** Specific dollar figures require validated industry reports. Below is the sizing approach we would use with verified data.
+
+### Approach
+
+Market sizing uses publicly available industry reports (Gartner, IDC, Forrester, Statista) and analyst estimates. Ranges reflect uncertainty in sub-segment definitions.
+
+### TAM (Total Addressable Market)
+
+The global market for CRM, sales automation, and AI agent platforms. We would source this from:
+- **Global CRM market:** Gartner "Market Guide for CRM" or IDC "Worldwide CRM Software" reports
+- **Sales engagement / outbound automation:** Gartner "Market Guide for Sales Engagement" or Forrester "Sales Automation Wave"
+- **AI agents / intelligent automation:** Gartner "Market Guide for AI Trust, Risk and Security Management" or IDC "AI Agent Forecast"
+
+> **Current status:** We have not yet purchased or verified specific report figures. TAM will be populated with sourced numbers after market research is completed.
+
+### SAM (Serviceable Addressable Market)
+
+Mid-market B2B companies (50-500 employees) with revenue operations teams:
+
+- B2B companies in this employee range in North America and Europe (source: ZoomInfo, LinkedIn Sales Navigator market data — to be verified)
+- Current spend on revenue tools per company (source: industry surveys — to be verified)
+- **SAM will be calculated after verifying company counts and average tool spend through primary research**
+
+### SOM (Serviceable Obtainable Market)
+
+Initial wedge: mid-market B2B companies with 4+ revenue tools and growing lead volume:
+
+- Subset of SAM with acute fragmentation pain
+- Initial target: first 10-50 design partners and early customers in first 2-3 years
+- **SOM will be estimated after design partner recruitment and initial customer discovery**
+
+> These are directional placeholders. All market sizing will be populated with verified, sourced numbers before investor submission. We prioritize accuracy over impressive-looking figures.
+
+---
+
+## For Investors
+
+### Why Now
+
+Three forces are converging:
+
+1. **LLM and agent capabilities are becoming operationally useful** — AI agents can now execute multi-step business workflows reliably, not just answer questions
+2. **Revenue teams already have fragmented software** — The average B2B sales stack includes 6-12 disconnected tools; coordination is the bottleneck
+3. **Businesses want automation with control** — Full autonomy is risky; governed automation with human oversight is what enterprises actually need
+
+The market is ready for a platform that orchestrates AI agents across revenue workflows with governance, visibility, and measurability built in.
+
+### Why This Problem
+
+Revenue operations is the highest-cost, lowest-visibility function in B2B sales. Companies invest in multiple tools but cannot answer: "What does it cost to get a lead from first touch to meeting?" The tools do not connect. The data does not flow. The workflows do not coordinate.
+
+### Why This Product
+
+GrowthOS AI is a full-stack autonomous revenue workflow platform:
+
+- **Agent runtime** with specialized agents, guardrails, and tool authorization
+- **Workflow engine** with DAG execution, retries, checkpoints, and dead letter queues
+- **Governance layer** with approval gates, risk classification, and confidence thresholds
+- **Built-in CRM** with pipeline management and activity tracking
+- **Knowledge base (RAG)** with tenant-scoped embeddings and semantic search
+- **Observability** with Prometheus metrics, OpenTelemetry tracing, and cost attribution
+- **Multi-tenant SaaS** with isolation, RBAC, and per-tenant quotas
+- **Security** with fail-closed authorization, idempotent operations, and audit logging
+
+This is not a prototype. It is a complete platform with 72 frontend pages, 191 backend API endpoints, 10 AI agents, and a full observability stack.
+
+### Why This Can Scale
+
+The same platform foundation powers multiple revenue workflows:
+
+- **Initial wedge:** Lead qualification and sales workflow
+- **Adjacent workflows:** Lead reactivation, partner acquisition, customer onboarding, revenue recovery, campaign optimization
+- **Reusable core:** Agent runtime, workflow engine, tool layer, governance, observability, multi-tenant control plane
+
+Each new workflow uses the same agents, engine, and governance — just different configuration. The platform gets more valuable as more workflows are added.
+
+### Founder and Team
+
+> Founder and team details, including domain expertise and relevant experience, will be presented in the Antler application.
 
 ---
 
@@ -280,20 +492,8 @@ Lead / sales qualification workflow
 |                               |                                   |
 |  +----------------------------v-------------------------------+  |
 |  |              10 SPECIALIZED AI AGENTS                       |  |
-|  |                                                              |  |
-|  |  +---------+ +---------+ +---------+ +---------+           |  |
-|  |  |Research | |  Lead   | |  Lead   | |Approval |           |  |
-|  |  | Agent   | |Scoring  | |Qualifi- | | Agent   |           |  |
-|  |  |         | | Agent   | | cation  | |         |           |  |
-|  |  +---------+ +---------+ +---------+ +---------+           |  |
-|  |  +---------+ +---------+ +---------+ +---------+           |  |
-|  |  | Sales   | |  CRM    | |Proposal | |Analytics|           |  |
-|  |  | Agent   | | Agent   | | Agent   | | Agent   |           |  |
-|  |  +---------+ +---------+ +---------+ +---------+           |  |
-|  |  +---------+ +-----------+                                 |  |
-|  |  | Human   | | Supervisor|                                 |  |
-|  |  | Review  | | Agent     |                                 |  |
-|  |  +---------+ +-----------+                                 |  |
+|  |  Research - Scoring - Qualification - Sales - CRM         |  |
+|  |  Proposal - Approval - Analytics - Human Review - Super.  |  |
 |  +----------------------------+-------------------------------+  |
 |                               |                                   |
 |  +----------------------------v-------------------------------+  |
@@ -314,8 +514,8 @@ Lead / sales qualification workflow
 
 GrowthOS ships with **10 specialized AI agents**, each purpose-built for a revenue operations function:
 
-| Agent | Function | Status |
-|-------|----------|--------|
+| Agent | Function | Implementation Status |
+|-------|----------|----------------------|
 | **Research Agent** | Enriches leads with company data, tech stack, news, and intent signals | Implemented |
 | **Lead Scoring Agent** | Scores leads using custom criteria and historical patterns | Implemented |
 | **Qualification Agent** | Runs automated discovery and qualifies prospects | Implemented |
@@ -336,75 +536,6 @@ Each agent operates within a **sandboxed execution environment** with:
 
 ---
 
-## Human-in-the-Loop
-
-Not every action should be fully autonomous. GrowthOS provides configurable human oversight at every level:
-
-- **Approval workflows** — Critical actions (sending proposals, large contracts, data deletion) route to designated reviewers before execution
-- **Risk classification** — Tools and actions are classified by risk level; higher-risk actions require human sign-off
-- **Confidence thresholds** — When agent confidence falls below a configurable threshold, the system pauses for human review
-- **Audit trail** — Every action, decision, and approval is logged with full traceability
-
-This means you get the speed of automation with the judgment of human oversight where it matters.
-
----
-
-## Workflow Orchestration
-
-The visual workflow engine enables complex multi-step revenue processes:
-
-- **DAG-based execution** — Define workflows as directed acyclic graphs with parallel and sequential steps
-- **Conditional branching** — Route leads through different paths based on score, industry, company size, or custom logic
-- **Retry policies** — Configurable retry with exponential backoff for transient failures
-- **Dead letter queues** — Failed executions are captured for inspection and replay
-- **Checkpointing** — Long-running workflows can pause and resume across sessions
-- **Event-driven triggers** — Workflows can be triggered by API calls, webhooks, schedules, or other workflow completions
-
----
-
-## RAG / Knowledge Base
-
-Agents access institutional knowledge through a built-in RAG (Retrieval-Augmented Generation) system:
-
-- **Vector store** with tenant-scoped embeddings
-- **Document ingestion** from PDFs, URLs, and structured data
-- **Semantic search** across the knowledge base
-- **Context injection** — Relevant knowledge is automatically retrieved and injected into agent prompts
-- **Freshness controls** — Knowledge base entries can be versioned and expired
-
----
-
-## Observability
-
-You can't improve what you can't measure. GrowthOS provides full-stack observability:
-
-- **Structured JSON logging** with correlation IDs across requests and agent executions
-- **Prometheus metrics** — Request rates, latencies, agent execution counts, token usage, cost attribution
-- **Distributed tracing** — OpenTelemetry-compatible traces across workflow steps
-- **Real-time dashboards** — Agent health, pipeline metrics, cost analytics, and performance benchmarks
-- **Alerting** — Configurable alerts for error rates, latency thresholds, and budget limits
-
----
-
-## Security Approach
-
-Security is foundational, not an afterthought:
-
-- **Multi-tenant isolation** — Row-level security with organization-scoped data access; cross-tenant queries are blocked and logged
-- **JWT authentication** — Access + refresh token rotation with JTI-based revocation
-- **RBAC** — Role-based access control with 7 roles (Super Admin, Org Admin, Workspace Admin, Manager, Operator, Viewer, API User) and granular permissions
-- **Rate limiting** — Redis sliding-window rate limiter with stricter limits on auth endpoints
-- **Account lockout** — 5 failed attempts triggers 15-minute lockout
-- **Password policy** — OWASP-compliant complexity requirements
-- **Security headers** — CSP, HSTS, X-Frame-Options, and other OWASP-recommended headers
-- **API key security** — SHA-256 hashed storage, never stored raw
-- **Webhook verification** — HMAC-SHA256 signature verification on all incoming webhooks
-- **AI guardrails** — Prompt injection detection, output PII filtering, tool execution policies
-- **Kill switch** — Emergency maintenance mode to halt all write operations
-- **Audit logging** — Complete audit trail of all administrative and data access actions
-
----
-
 ## Technology Stack
 
 | Layer | Technology |
@@ -417,169 +548,49 @@ Security is foundational, not an afterthought:
 | **Vector Store** | Embedded vector search for RAG |
 | **Observability** | Prometheus, Grafana, OpenTelemetry |
 | **Auth** | JWT (HS256), bcrypt, OAuth2 (Google/GitHub), OIDC, SAML 2.0 (stubs) |
-| **Billing** | Stripe, Razorpay (mock integrations) |
+| **Billing** | Stripe, Razorpay (mock integrations for development) |
 | **Deployment** | Docker, Kubernetes, Helm |
 | **CI/CD** | GitHub Actions (pytest, Bandit, Trivy, Docker build) |
 
 ---
 
-## Current Status
-
-**Version:** RC.5 (Release Candidate 5)
-
-| Capability | Status |
-|------------|--------|
-| Multi-agent orchestration | Implemented |
-| Visual workflow engine | Implemented |
-| CRM with pipeline management | Implemented |
-| Lead ingestion and management | Implemented |
-| Email/LinkedIn/WhatsApp/SMS communication | Implemented |
-| Human-in-the-loop approvals | Implemented |
-| Multi-tenant SaaS platform | Implemented |
-| Billing and subscription management | Implemented |
-| RBAC and audit logging | Implemented |
-| Analytics and reporting | Implemented |
-| Knowledge base (RAG) | Implemented |
-| AI guardrails and security | Implemented |
-| Observability (metrics, logging, tracing) | Implemented |
-| Production deployment (Kubernetes) | Implemented |
-| Agent marketplace | Partial |
-| Voice calls | Partial |
-| Industry-specific templates | Partial |
-
----
-
 ## Screenshots
 
-> Screenshots from the premium UI — live product captures coming soon.
+> **Status: Placeholders — screenshots will be captured from the working product before investor submission.**
 
-| Screen | Preview |
-|--------|---------|
-| **Dashboard** | [SCREENSHOT: Dashboard with real-time agent fleet status and pipeline metrics] |
-| **AI Workforce** | [SCREENSHOT: Visual agent grid with status, model, token usage, cost] |
-| **Workflow Execution** | [SCREENSHOT: DAG visualization with step-by-step execution timeline] |
-| **Approval Queue** | [SCREENSHOT: Pending approvals with confidence scores and full context] |
-| **Lead Pipeline** | [SCREENSHOT: Lead list with AI scores, stages, and activity history] |
-| **Analytics** | [SCREENSHOT: Executive KPI dashboard with cost attribution and forecasts] |
+| Screen | Description | Status |
+|--------|-------------|--------|
+| **Dashboard** | Real-time agent fleet status, lead pipeline metrics, system health | Planned |
+| **AI Workforce** | Visual agent grid with status, model, token usage, cost | Planned |
+| **Workflow Execution** | DAG visualization with step-by-step execution timeline | Planned |
+| **Approval Queue** | Pending approvals with confidence scores and full context | Planned |
+| **Lead Pipeline** | Lead list with AI scores, stages, and activity history | Planned |
+| **Analytics** | Executive KPI dashboard with cost attribution and forecasts | Planned |
+
+> Screenshots will be added to `screenshots/` directory from the premium UI.
 
 ---
 
 ## Demo
 
-> Live demo and video walkthrough coming soon.
+> **Status: Coming after demo validation.** Live demo and video walkthrough will be deployed before investor submission.
 
-### 01 — Dashboard
-**What you see:** Real-time agent fleet status, lead pipeline metrics, system health, campaign overview
-**What the system is doing:** Aggregating data from all agents, workflows, and CRM into a single operational view
-**Why it matters:** One screen replaces 6 dashboards across separate tools
+### What the Demo Shows
 
-### 02 — Lead Ingestion
-**What you see:** Leads entering from multiple sources (web forms, CSV, API, LinkedIn)
-**What the system is doing:** Normalizing, validating, and routing incoming leads into the workflow engine
-**Why it matters:** No lead falls through the cracks between tools
+| Step | What You See | What the System Does |
+|------|-------------|---------------------|
+| **01 — Dashboard** | Agent fleet status, pipeline metrics, system health | Aggregates data from all agents and workflows |
+| **02 — Lead Ingestion** | Leads entering from multiple sources | Normalizes, validates, routes into workflow engine |
+| **03 — AI Research** | Research agent enriching a lead | Queries data sources, builds company profile |
+| **04 — Qualification** | BANT discovery + lead scoring | Applies consistent qualification logic, ranks leads |
+| **05 — Workflow Timeline** | Visual DAG with execution status | Orchestrates parallel/sequential steps |
+| **06 — Human Approval** | Approval queue with context | Pauses high-risk actions for review |
+| **07 — Outreach + CRM** | Multi-channel outreach + CRM updates | Executes context-aware outreach, keeps records current |
+| **08 — Analytics + Cost** | KPIs, cost attribution, ROI | Aggregates performance across all workflows |
+| **09 — Audit / Governance** | Complete audit trail | Logs all operations with correlation IDs |
 
-### 03 — AI Research
-**What you see:** Research agent enriching a lead with company data, tech stack, news, intent signals
-**What the system is doing:** Querying public data sources, company databases, and news feeds to build context
-**Why it matters:** Reps start conversations with context, not guesses
-
-### 04 — Qualification + Score
-**What you see:** Qualification agent running discovery questions, scoring agent ranking the lead
-**What the system is doing:** Applying BANT criteria and historical patterns to produce a structured qualification and confidence score
-**Why it matters:** Consistent, objective qualification across all leads
-
-### 05 — Workflow Timeline
-**What you see:** Visual DAG with step-by-step execution, timing, and status
-**What the system is doing:** Orchestrating parallel and sequential steps through the workflow engine
-**Why it matters:** Complex processes run deterministically and are fully auditable
-
-### 06 — Human Approval
-**What you see:** Approval queue with confidence scores, risk levels, and full context
-**What the system is doing:** Pausing high-risk actions and routing to designated reviewers
-**Why it matters:** Humans stay in control of critical decisions
-
-### 07 — Outreach + CRM
-**What you see:** Multi-channel outreach (email, LinkedIn, WhatsApp, SMS) and CRM updates
-**What the system is doing:** Executing context-aware outreach and keeping records current automatically
-**Why it matters:** Right message, right channel, right timing — without manual data entry
-
-### 08 — Analytics + Cost
-**What you see:** Executive KPIs, cost attribution per agent/workflow, ROI metrics
-**What the system is doing:** Aggregating performance data across all workflows and agents
-**Why it matters:** Know exactly what each workflow costs and what it produces
-
-### 09 — Audit / Governance
-**What you see:** Complete audit trail of every action, decision, and approval
-**What the system is doing:** Logging all operations with correlation IDs, timestamps, and actor context
-**Why it matters:** Full traceability for compliance, debugging, and optimization
-
-> **[LIVE DEMO URL]** | **[VIDEO URL]** | **[SCREENSHOTS]**
-
----
-
-## For Investors
-
-### Why Now
-
-Three forces are converging:
-
-1. **LLM and agent capabilities are becoming operationally useful** — AI agents can now execute multi-step business workflows reliably, not just answer questions
-2. **Revenue teams already have fragmented software** — The average B2B sales stack includes 6-12 disconnected tools; coordination is the bottleneck
-3. **Businesses want automation with control** — Full autonomy is risky; governed automation with human oversight is what enterprises actually need
-
-The market is ready for a platform that orchestrates AI agents across revenue workflows with governance, visibility, and measurability built in.
-
-### Why This Product
-
-GrowthOS AI is a full-stack autonomous revenue workflow platform:
-
-- **Agent runtime** with specialized agents, guardrails, and tool authorization
-- **Workflow engine** with DAG execution, retries, checkpoints, and dead letter queues
-- **Governance layer** with approval gates, risk classification, and confidence thresholds
-- **Built-in CRM** with pipeline management and activity tracking
-- **Knowledge base (RAG)** with tenant-scoped embeddings and semantic search
-- **Observability** with Prometheus metrics, OpenTelemetry tracing, and cost attribution
-- **Multi-tenant SaaS** with isolation, RBAC, and per-tenant quotas
-- **Security** with fail-closed authorization, idempotent operations, and audit logging
-
-This is not a prototype. It is a complete platform with 72 frontend pages, 80+ backend API endpoints, 10 AI agents, and a full observability stack.
-
-### Why It Can Scale
-
-The same platform foundation powers multiple revenue workflows:
-
-- **Initial wedge:** Lead qualification and sales workflow
-- **Adjacent workflows:** Lead reactivation, partner acquisition, customer onboarding, revenue recovery, campaign optimization
-- **Reusable core:** Agent runtime, workflow engine, tool layer, governance, observability, multi-tenant control plane
-
-Each new workflow uses the same agents, engine, and governance — just different configuration. The platform gets more valuable as more workflows are added.
-
-### Market Positioning
-
-GrowthOS AI sits at the intersection of three categories:
-
-1. **CRM** (system of record) — GrowthOS includes a built-in CRM
-2. **Sales automation** (execution layer) — GrowthOS orchestrates multi-channel outreach
-3. **AI agents** (intelligence layer) — GrowthOS runs specialized agents with governance
-
-**The thesis:** The future of revenue operations is not better tools — it is autonomous agents that execute governed workflows end-to-end. GrowthOS AI is the operating system for that future.
-
-### Initial Customer Wedge
-
-Mid-market B2B companies (50-500 employees) with growing lead volume and fragmented revenue operations:
-
-- Have outgrown basic CRM but cannot afford enterprise RevOps teams
-- Already using 4-8 tools for lead management
-- Feel the pain of manual handoffs and slow response times
-- Want automation but need governance and control
-
-**First workflow:** Lead Ingest -> Research -> Qualify -> Score -> Approve -> CRM -> Outreach -> Meeting
-
----
-
-## Founders
-
-> *Founder section — to be completed with actual founder bios, photos, and contact information.*
+> **[LIVE DEMO URL — Coming after demo validation]**
+> **[VIDEO WALKTHROUGH — Coming after demo validation]**
 
 ---
 
@@ -593,6 +604,6 @@ This repository is provided for investor review purposes only. Unauthorized copy
 
 <div align="center">
 
-**[Request Demo](mailto:demo@growthos.ai)** · **[Documentation](docs/)** · **[Architecture](architecture/)**
+**[Request Demo](mailto:demo@growthos.ai)** · **[Architecture](architecture/)** · **[Security](docs/SECURITY.md)**
 
 </div>

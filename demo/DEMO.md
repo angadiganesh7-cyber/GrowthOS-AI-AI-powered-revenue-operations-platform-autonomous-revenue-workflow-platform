@@ -1,8 +1,10 @@
-# GrowthOS AI — Live Demo
+# GrowthOS AI — Demo
+
+> **Status: Coming after demo validation.** Live demo and video walkthrough will be deployed before investor submission.
 
 ## Access
 
-> **Live demo URL:** [LIVE DEMO URL]
+> **Live demo URL:** Coming after demo validation
 >
 > Demo credentials will be provided upon request.
 
@@ -108,6 +110,6 @@ For a detailed architecture walkthrough, see [architecture/ARCHITECTURE.md](../a
 
 ## Video Demo
 
-> Video walkthrough coming soon.
-
-> **[VIDEO URL]**
+> Video walkthrough coming after demo validation.
+>
+> **[VIDEO URL — Coming after demo validation]**
