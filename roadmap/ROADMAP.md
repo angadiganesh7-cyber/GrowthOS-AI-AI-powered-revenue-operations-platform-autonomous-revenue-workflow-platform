@@ -9,7 +9,7 @@ Build the autonomous revenue workflow platform that replaces fragmented sales to
 ## Phase 1: Foundation (Completed)
 
 - Multi-agent orchestration engine
-- 8 specialized AI agents
+- 10 specialized AI agents
 - Visual workflow engine with DAG execution
 - Multi-tenant SaaS platform
 - Authentication and RBAC
@@ -58,6 +58,28 @@ Build the autonomous revenue workflow platform that replaces fragmented sales to
 - Custom AI model fine-tuning
 - Dedicated infrastructure deployment
 - Enterprise SLA and support
+
+---
+
+## Platform Expansion Path
+
+```
+Phase 1: Lead qualification workflow
+    |
+    v
+Phase 2: Lead reactivation, partner acquisition
+    |
+    v
+Phase 3: Customer onboarding, revenue recovery
+    |
+    v
+Phase 4: Campaign optimization, custom workflows
+    |
+    v
+Phase 5: Agent marketplace, enterprise platform
+```
+
+Each phase uses the same core: agents + workflow engine + governance + observability. New workflows are configuration, not rebuilding.
 
 ---
 

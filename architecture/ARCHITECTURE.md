@@ -50,7 +50,7 @@
 Organization
 ├── Workspace
 │   ├── User (with role: ADMIN/MANAGER/USER)
-│   ├── Agent (8 specialized types)
+│   ├── Agent (10 specialized types)
 │   ├── Workflow (DAG definition)
 │   │   └── WorkflowExecution
 │   │       └── WorkflowStepExecution
