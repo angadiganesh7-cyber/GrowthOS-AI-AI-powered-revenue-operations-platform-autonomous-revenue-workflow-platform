@@ -11,6 +11,7 @@ The revenue operations market is fragmented across five categories. Each solves 
 | **AI Sales Agents** | Automate prospecting and conversation | Point solution; no workflow orchestration |
 | **Workflow Automation** | Connect tools with rules and triggers | Generic; no domain-specific agents |
 | **AI Agent Frameworks** | Provide building blocks for custom agents | Development tools, not finished products |
+| **Observability / Incident Tools** | Monitor logs, metrics, alerts | Detection and dashboards; no autonomous investigation or remediation workflow |
 
 ## Where GrowthOS Fits
 
@@ -39,22 +40,22 @@ GrowthOS AI is not another CRM, outbound tool, AI assistant, workflow builder, o
 
 ## Category Comparison
 
-| Capability | CRM | Outbound | AI Agents | Workflow | AI Frameworks | **GrowthOS** |
-|------------|-----|----------|-----------|----------|---------------|-------------|
-| Lead management | Yes | Yes | Partial | No | No | Yes |
-| Multi-channel outreach | No | Yes | Partial | No | No | Yes |
-| AI-powered research | No | No | Yes | No | Build your own | Yes |
-| Workflow orchestration | No | Partial | No | Yes | Build your own | Yes |
-| Human-in-the-loop | No | No | Partial | Partial | Build your own | Yes |
-| Multi-agent collaboration | No | No | No | No | Build your own | Yes |
-| Built-in CRM | Yes | No | No | No | No | Yes |
-| Knowledge base (RAG) | No | No | Partial | No | Build your own | Yes |
-| Cost attribution | No | No | No | No | Build your own | Yes |
-| Multi-tenant SaaS | Yes | Yes | No | No | No | Yes |
-| Observability | Partial | Partial | No | Partial | Build your own | Yes |
-| Production-ready UI | Yes | Yes | No | Partial | No | Yes |
-| Governance / approval gates | No | No | Partial | Partial | Build your own | Yes |
-| **Ready to use out of the box** | Yes | Yes | No | Partial | **No** | **Yes** |
+| Capability | CRM | Outbound | AI Agents | Workflow | AI Frameworks | Observability | **GrowthOS** |
+|------------|-----|----------|-----------|----------|---------------|---------------|-------------|
+| Lead management | Yes | Yes | Partial | No | No | No | Yes |
+| Multi-channel outreach | No | Yes | Partial | No | No | No | Yes |
+| AI-powered research | No | No | Yes | No | Build your own | No | Yes |
+| Workflow orchestration | No | Partial | No | Yes | Build your own | No | Yes |
+| Human-in-the-loop | No | No | Partial | Partial | Build your own | No | Yes |
+| Multi-agent collaboration | No | No | No | No | Build your own | No | Yes |
+| Built-in CRM | Yes | No | No | No | No | No | Yes |
+| Knowledge base (RAG) | No | No | Partial | No | Build your own | No | Yes |
+| Cost attribution | No | No | No | No | Build your own | Partial | Yes |
+| Multi-tenant SaaS | Yes | Yes | No | No | No | Partial | Yes |
+| Observability | Partial | Partial | No | Partial | Build your own | Yes | Yes |
+| Production-ready UI | Yes | Yes | No | Partial | No | Yes | Yes |
+| Governance / approval gates | No | No | Partial | Partial | Build your own | No | Yes |
+| **Ready to use out of the box** | Yes | Yes | No | Partial | **No** | Yes | **Yes** |
 
 ## Key Differentiators
 
@@ -76,6 +77,8 @@ Every workflow step, agent action, token cost, and approval decision is tracked.
 ## Why This Matters
 
 The market is converging toward autonomous AI agents operating within structured workflows. GrowthOS AI is purpose-built for this convergence — not retrofitted from a CRM, outbound tool, or chatbot.
+
+The GrowthOS platform is designed to extend beyond revenue operations. LogGlance AI is a planned future application concept within the GrowthOS ecosystem, focused on AI operations and observability. It has not yet been built, launched, or commercially validated.
 
 **For buyers:** One platform instead of 6+ tools. Lower integration complexity. Better data flow. Autonomous operations with human oversight. Measurable cost per workflow.
 
@@ -103,3 +106,23 @@ An investor may ask: "Why not use LangChain, CrewAI, or AutoGen to build this?"
 **The distinction:** Agent frameworks give you building blocks. GrowthOS is the integrated revenue-execution product layer, combining orchestration, governance, observability and workflow controls in one system.
 
 GrowthOS uses the same underlying AI capabilities (LLM calls, vector search, prompt engineering) but wraps them in a complete product with governance, workflow orchestration, CRM, observability, and multi-tenancy — the pieces that make AI agents useful in production revenue operations.
+
+---
+
+## GrowthOS Ecosystem: Platform vs. Applications
+
+GrowthOS is the **parent AI business execution platform**. GrowthOS AI — Revenue Operations is the **first implemented application**. LogGlance AI is a **future application concept** within the GrowthOS ecosystem, not a currently built product.
+
+| | GrowthOS AI (Revenue Ops) | LogGlance AI (AI Ops) | Platform Foundation |
+|---|---|---|---|
+| **What it is** | Autonomous revenue workflow application | Future application concept — AI operations and observability | Shared execution infrastructure |
+| **Market** | B2B revenue operations teams | Organizations operating AI-enabled software and business-critical systems | Internal (powers applications) |
+| **Status** | RC.5 — shipped, product validation stage | Future concept — not yet built, launched, or validated | Implemented |
+| **Customers** | None claimed | N/A — product does not exist yet | N/A |
+| **Revenue** | None claimed | N/A — product does not exist yet | N/A |
+
+**Key distinction:** GrowthOS AI is a working product. LogGlance AI is a future application concept — it has not been built, launched, or commercially validated. If built, it would share the same platform foundation (agent runtime, workflow engine, governance, observability) but deliver domain-specific value through different agents, workflows, and integrations.
+
+GrowthOS is not an observability tool. GrowthOS AI does not compete with Datadog, Splunk, or PagerDuty. LogGlance AI, if built, would operate in a different market segment with a different value proposition — using the GrowthOS platform foundation to deliver AI-assisted investigation and remediation workflows, not just dashboards and alerts.
+
+The strategic pattern: build the AI execution infrastructure once, then deploy multiple specialized business applications on top of it. GrowthOS AI is the first implemented application and current wedge. LogGlance AI is one future application concept, not a currently built product.

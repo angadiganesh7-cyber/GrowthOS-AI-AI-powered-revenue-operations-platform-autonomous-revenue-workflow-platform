@@ -1,8 +1,10 @@
 <div align="center">
 
-# GrowthOS AI
+# GrowthOS
 
-### The Execution Layer for Revenue Workflows
+### The AI Business Execution Platform
+
+**GrowthOS AI — Revenue Operations** is the first application built on the GrowthOS platform.
 
 **Lead in. Research. Qualify. Score. Approve. Outreach. CRM. Meeting. Measure.**
 **One platform. 10 AI agents. Full workflow. Human oversight. Every action visible.**
@@ -179,6 +181,8 @@ Tools automate individual activities.
 
 **GrowthOS orchestrates the entire governed revenue workflow.**
 
+> GrowthOS AI is the first application demonstrating this capability. The same platform foundation can orchestrate other business workflows.
+
 ---
 
 ## Why Not Salesforce + Zapier + LangChain?
@@ -206,6 +210,63 @@ GrowthOS is not a framework. It is an integrated revenue-execution product layer
 
 ---
 
+## GrowthOS Ecosystem
+
+```
+              GROWTHOS
+       AI Business Execution Platform
+                   |
+    Shared Runtime / Agents / Workflows
+    Governance / Observability / Tenancy
+                   |
+     +-------------+-------------+
+     |             |             |
+     v             v             v
+  GrowthOS AI   LogGlance AI   Future
+  Revenue Ops   AI Operations  Applications
+  [CURRENT]     [FUTURE]       [FUTURE]
+```
+
+GrowthOS is the **parent AI business execution platform**. It provides a shared execution and governance foundation on which multiple specialized business applications can operate.
+
+**GrowthOS AI — Revenue Operations** is the first implemented application. It uses the full platform to execute the lead-to-revenue lifecycle with AI agents.
+
+**LogGlance AI — Future Application Concept** is a planned future application concept within the GrowthOS ecosystem, focused on AI operations and observability. The concept is intended to address organizations operating AI-enabled software and business-critical systems. It has not yet been built, launched, or commercially validated.
+
+**Future Applications** — The same platform foundation is designed to support additional business-operation workflows, including customer onboarding, revenue recovery, partner operations, and other AI-enabled business workflows. These are expansion opportunities, not currently built products.
+
+### The GrowthOS Platform Thesis
+
+GrowthOS is not intended to be a collection of unrelated SaaS products. The strategy is to build a reusable AI execution platform and launch focused applications on top of it. GrowthOS AI is the first wedge; additional applications expand the addressable market without rebuilding the underlying execution infrastructure.
+
+The platform provides shared capabilities that every application inherits:
+
+| Shared Capability | What It Provides |
+|-------------------|-----------------|
+| **AI Agent Runtime** | Multi-agent lifecycle, session management, context propagation |
+| **Reusable Agents** | Specialized agents with defined responsibilities, guardrails, and tool access |
+| **Workflow Engine** | DAG-based execution, retries, checkpoints, dead letter queues |
+| **Human Approval Mechanisms** | Configurable approval gates, confidence thresholds, risk classification |
+| **Tool Authorization** | Fail-closed tool boundaries, risk levels, per-agent tool access |
+| **Observability & Cost Controls** | Prometheus metrics, OpenTelemetry tracing, per-action cost attribution |
+| **Multi-Tenancy & RBAC** | Organization isolation, workspace scoping, 7-role permission hierarchy |
+| **Auditability** | Complete audit trail with correlation IDs on every operation |
+| **Integrations** | Pluggable tool layer for external APIs, CRMs, and data sources |
+
+The pattern follows a **Shopify-like ecosystem model** — shared platform infrastructure on which multiple specialized applications operate. This is an analogy to explain the platform-and-applications architecture, not a direct comparison to Shopify as a company or market position.
+
+### Why This Architecture Works
+
+- **One execution infrastructure** — built once, reused across applications
+- **One governance layer** — approval gates, RBAC, audit, cost attribution shared across all apps
+- **One workflow engine** — DAG orchestration, retries, checkpoints for any business process
+- **One agent runtime** — multi-agent coordination, tool authorization, guardrails for any domain
+- **Multiple applications** — each addressing a distinct business problem with domain-specific agents and workflows
+
+Each new application reuses the platform foundation. The platform gets more valuable as more applications are built on it.
+
+---
+
 ## What Makes GrowthOS Different
 
 ### 1. Revenue Workflow Orchestration
@@ -230,7 +291,7 @@ Multi-tenant isolation, RBAC with 7 roles, tool authorization boundaries, idempo
 
 ## Why Customers Pay
 
-### Today (Without GrowthOS)
+### Today (Without GrowthOS AI)
 - 6-12 disconnected tools
 - Manual lead handoffs between systems
 - Slow response times (hours or days)
@@ -238,7 +299,7 @@ Multi-tenant isolation, RBAC with 7 roles, tool authorization boundaries, idempo
 - No visibility into cost per lead or workflow
 - Reps doing coordination work instead of selling
 
-### With GrowthOS
+### With GrowthOS AI
 - One coordinated workflow
 - AI agents execute research, qualification, scoring, outreach
 - Faster response (minutes, not hours)
@@ -272,26 +333,28 @@ This is the highest-value, most universal revenue workflow. It is narrow enough 
 ## Why This Can Become a Platform
 
 ### Initial Wedge
-Lead / sales qualification workflow
+GrowthOS AI — lead qualification and revenue operations workflow (shipped, RC.5)
+
+### Second Application (Future Concept)
+LogGlance AI — future application concept for AI operations / observability (not yet built)
 
 ### Adjacent Workflows (Same Platform)
 - Lead reactivation (dormant pipeline)
-- Merchant / partner acquisition
+- Partner / merchant acquisition
 - Customer onboarding automation
 - Revenue recovery (churn prevention)
 - Campaign optimization loops
-- Any workflow where AI agents execute governed revenue tasks
+- Any workflow where AI agents execute governed business tasks
 
-### What Stays the Same
+### What Stays the Same Across Applications
 - Agent runtime and lifecycle
 - Workflow engine (DAG, retries, checkpoints)
 - Tool authorization and risk classification
-- Knowledge base and RAG
 - Governance (approval gates, RBAC, audit)
 - Observability (metrics, tracing, cost attribution)
 - Multi-tenant SaaS control plane
 
-**The platform thesis:** One agent runtime + one workflow engine + one governance layer = multiple revenue workflows on a single operating system.
+**The platform thesis:** One agent runtime + one workflow engine + one governance layer = multiple business applications on a single execution platform.
 
 ---
 
@@ -436,7 +499,7 @@ Revenue operations is the highest-cost, lowest-visibility function in B2B sales.
 
 ### Why This Product
 
-GrowthOS AI is a full-stack autonomous revenue workflow platform:
+GrowthOS AI is a full-stack autonomous revenue workflow platform — the first application built on the GrowthOS shared AI business execution platform:
 
 - **Agent runtime** with specialized agents, guardrails, and tool authorization
 - **Workflow engine** with DAG execution, retries, checkpoints, and dead letter queues
@@ -449,15 +512,32 @@ GrowthOS AI is a full-stack autonomous revenue workflow platform:
 
 This is not a prototype. It is a complete platform with 72 frontend pages, 191 backend API endpoints, 10 AI agents, and a full observability stack.
 
+The platform foundation is designed to be reusable. LogGlance AI is one future application concept that could demonstrate this reusability — same platform, different application, different market. It has not yet been built.
+
 ### Why This Can Scale
 
-The same platform foundation powers multiple revenue workflows:
+The GrowthOS platform is designed to power multiple business applications:
 
-- **Initial wedge:** Lead qualification and sales workflow
-- **Adjacent workflows:** Lead reactivation, partner acquisition, customer onboarding, revenue recovery, campaign optimization
+- **Initial wedge:** GrowthOS AI — revenue operations (shipped, RC.5)
+- **Future application concept:** LogGlance AI — AI operations / observability (not yet built)
+- **Adjacent revenue workflows:** Lead reactivation, partner acquisition, customer onboarding, revenue recovery, campaign optimization
+- **Cross-industry expansion:** Customer onboarding, revenue recovery, partner operations, and other AI-enabled business workflows (expansion opportunity)
 - **Reusable core:** Agent runtime, workflow engine, tool layer, governance, observability, multi-tenant control plane
 
-Each new workflow uses the same agents, engine, and governance — just different configuration. The platform gets more valuable as more workflows are added.
+Each new application reuses the platform foundation. The platform gets more valuable as more applications are built on it.
+
+### Investor Thesis
+
+> **Initial wedge → reusable platform → multiple applications → cross-industry expansion**
+
+1. **Wedge:** GrowthOS AI solves revenue operations fragmentation for mid-market B2B — a clear, acute pain point with existing demand
+2. **Platform:** The same AI execution infrastructure (agent runtime, workflow engine, governance, observability) is reusable across business domains
+3. **Future applications:** LogGlance AI is one future application concept that demonstrates the potential — same platform, different application, different market (not yet built)
+4. **Cross-industry:** The platform is designed for expansion into additional business-operation workflows across industries
+
+The strategic thesis: build the AI execution infrastructure once, then deploy multiple specialized business applications on top of it.
+
+GrowthOS AI is the first implemented application and current product wedge. The longer-term vision is to reuse the underlying platform capabilities to support additional specialized applications. LogGlance AI is one future application concept, not a currently built product.
 
 ### Founder and Team
 
@@ -469,41 +549,46 @@ Each new workflow uses the same agents, engine, and governance — just differen
 
 ```
 +------------------------------------------------------------------+
-|                     GROWTHOS AI PLATFORM                          |
+|                     GROWTHOS                                      |
+|              AI Business Execution Platform                       |
 +------------------------------------------------------------------+
 |                                                                    |
 |  +------------------------------------------------------------+  |
-|  |                   WEB UI (Next.js 16)                       |  |
-|  |  Dashboard - AI Workforce - Workflows - CRM - Analytics    |  |
-|  +----------------------------+-------------------------------+  |
-|                               | REST API                         |
-|  +----------------------------v-------------------------------+  |
-|  |                  API LAYER (FastAPI)                        |  |
-|  |  Auth - Rate Limiting - RBAC - Tenant Isolation           |  |
-|  +----------------------------+-------------------------------+  |
-|                               |                                   |
-|  +----------------------------v-------------------------------+  |
-|  |               ORCHESTRATION ENGINE                          |  |
-|  |  +----------+ +----------+ +----------+ +----------+      |  |
-|  |  | Workflow | |  Agent   | | Approval | |  Tool    |      |  |
-|  |  |  Engine  | | Runtime  | | Gateway  | | Executor |      |  |
-|  |  +----------+ +----------+ +----------+ +----------+      |  |
-|  +----------------------------+-------------------------------+  |
-|                               |                                   |
-|  +----------------------------v-------------------------------+  |
-|  |              10 SPECIALIZED AI AGENTS                       |  |
-|  |  Research - Scoring - Qualification - Sales - CRM         |  |
-|  |  Proposal - Approval - Analytics - Human Review - Super.  |  |
+|  |           SHARED EXECUTION + GOVERNANCE FOUNDATION          |  |
+|  |                                                             |  |
+|  |  +-------------+ +-------------+ +-------------+          |  |
+|  |  |   Agent     | |  Workflow   | |  Approval   |          |  |
+|  |  |   Runtime   | |  Engine     | |  Gateway    |          |  |
+|  |  +-------------+ +-------------+ +-------------+          |  |
+|  |  +-------------+ +-------------+ +-------------+          |  |
+|  |  |    Tool     | |  Knowledge  | | Observabil. |          |  |
+|  |  |  Executor   | |  Base (RAG) | | + Cost Attr |          |  |
+|  |  +-------------+ +-------------+ +-------------+          |  |
+|  |  +-------------+ +-------------+ +-------------+          |  |
+|  |  | Multi-      | |    RBAC     | |   Audit     |          |  |
+|  |  | Tenancy     | |  7 Roles    | |   Trail     |          |  |
+|  |  +-------------+ +-------------+ +-------------+          |  |
 |  +----------------------------+-------------------------------+  |
 |                               |                                   |
 |  +----------------------------v-------------------------------+  |
-|  |                     DATA LAYER                               |  |
-|  |  PostgreSQL - Redis - Vector Store (RAG) - File Storage    |  |
+|  |                    APPLICATIONS                             |  |
+|  |                                                             |  |
+|  |  +-------------------+  +-------------------+             |  |
+  |  |  |  GrowthOS AI      |  |  LogGlance AI     |             |  |
+|  |  |  Revenue Ops      |  |  AI Operations    |             |  |
+|  |  |  [CURRENT]        |  |  [FUTURE]         |             |  |
+|  |  +-------------------+  +-------------------+             |  |
+|  |                                                             |  |
+|  |               +-------------------+                        |  |
+|  |               | Future            |                        |  |
+|  |               | Applications      |                        |  |
+|  |               | [PLANNED]         |                        |  |
+|  |               +-------------------+                        |  |
 |  +------------------------------------------------------------+  |
 |                                                                    |
 |  +------------------------------------------------------------+  |
-|  |                   OBSERVABILITY                              |  |
-|  |  Structured Logging - Prometheus Metrics - OpenTelemetry   |  |
+|  |                     DATA LAYER                               |  |
+|  |  PostgreSQL - Redis - Vector Store (RAG) - File Storage    |  |
 |  +------------------------------------------------------------+  |
 +------------------------------------------------------------------+
 ```
